@@ -21,6 +21,8 @@ jobs:
   - task: echo-vars
     image: ubuntu-image
     params:
-      VARS_FILES: gdevops/vars/vars.yml
+      VARS_FILES: 
+      - gdevops/vars/vars.yml
+      - gdevops/1.txt
     file: gdevops/tasks/echo_vars.yml
 
