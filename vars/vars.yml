@@ -1,0 +1,7 @@
+vars:
+  var1: value1
+  var2: value2
+
+valuelist:
+  - value1
+  - value2

@@ -1,0 +1,25 @@
+resources:
+
+- name: alpine-image
+  type: docker-image
+  source: {repository: alpine}
+
+- name: gdevops
+  type: git
+  source:
+    uri: git@github.com:gerald-dev/gdevops.git
+
+jobs:
+- name: enumerate-vars-file
+  plan:
+  - in_parallel:
+    - get: alpine-image
+      params:
+        globs: ["*image*"]
+        unpack: true
+    - get: gdevops
+  - task: echo-vars
+    image: alpine-image
+    file: gdevops/tasks/echo_vars.yml
+    params:
+      VARS_FILE: gdevops/vars/vars.yml
