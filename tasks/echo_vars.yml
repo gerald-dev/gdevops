@@ -5,9 +5,9 @@ inputs:
 - name: gdevops
 
 params:
-  VARS_FILE: vars.yml
+  VARS_FILES: vars.yml
   # - Required
-  # - Filepath of the vars YAML
+  # - Filepath to the vars YAML file
   # - The path is relative to root of the `vars` input
 
 run:
