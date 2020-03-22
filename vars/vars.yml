@@ -1,7 +1,9 @@
 vars:
-  var1: value1
-  var2: value2
-
-valuelist:
+  files:
   - value1
   - value2
+
+  users:
+  - user1
+  - user2
+

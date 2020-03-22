@@ -8,7 +8,12 @@ vars_files_args=("")
 for vf in ${VARS_FILES}
 do
   echo ${vf}
-  vars_files_args+=("--vars-file ${vf}")
+  vars_files_args+=("${vf}")
 done
 
 echo "${vars_files_args[@]}"
+for item in "${vars_files_args[@]}"
+do
+  echo $item
+done
+
